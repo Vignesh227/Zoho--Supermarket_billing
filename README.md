@@ -75,6 +75,12 @@ _Functionality:_
 ![image](https://github.com/user-attachments/assets/45973149-1e65-4588-a77f-52a0f12ddd13)
 ![image](https://github.com/user-attachments/assets/ddb48b0b-a869-4f5d-9385-44d7133d593a)
 ![image](https://github.com/user-attachments/assets/b5c7a513-af66-487d-bea4-b5134c314c2f)
+![image](https://github.com/user-attachments/assets/14b1abc4-e457-44dc-8c35-ed0566f8ada3)
+![image](https://github.com/user-attachments/assets/c1ed7c12-4ff9-4031-90d8-1d17c7b637b5)
+![image](https://github.com/user-attachments/assets/43e85080-a706-4907-be42-0c66cb8f7c74)
+![image](https://github.com/user-attachments/assets/24a9ab02-fd48-4663-a464-0134b46317ce)
+![image](https://github.com/user-attachments/assets/0e4d1a1b-3055-4557-a516-6f2182b2ce86)
+
 
 
 
