@@ -68,3 +68,17 @@ _Functionality:_
 
 ## Ouput Screenshots
 
+![image](https://github.com/user-attachments/assets/86f90f88-4507-4b59-ac67-e24ea63ced0c)
+![image](https://github.com/user-attachments/assets/53a0e8cf-d805-40fb-8d6f-fb45a56994db)
+![image](https://github.com/user-attachments/assets/daa87a1e-f923-4421-8d61-35e503fed011)
+![image](https://github.com/user-attachments/assets/508cc347-f062-4f84-8a50-c015aaa36859)
+![image](https://github.com/user-attachments/assets/45973149-1e65-4588-a77f-52a0f12ddd13)
+![image](https://github.com/user-attachments/assets/ddb48b0b-a869-4f5d-9385-44d7133d593a)
+![image](https://github.com/user-attachments/assets/b5c7a513-af66-487d-bea4-b5134c314c2f)
+
+
+
+
+
+
+
