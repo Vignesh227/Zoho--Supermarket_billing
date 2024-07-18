@@ -5,10 +5,12 @@ import java.sql.ResultSet;
 
 public class billdisplay {
 
+    // Set username, pass, and establish connection url
     static String url = "jdbc:mysql://localhost:3308/supermarket?allowPublicKeyRetrieval=true&useSSL=false";
     static String username = "root";
     static String pass = "admin";
 
+    // Function to display the customer details, who purchased
     public static void displayCustomer(Integer billid){
         String billQuery = "SELECT b.billid, c.custname, c.phnno, b.totprice, b.date " +
                             "FROM billing b JOIN customer c ON b.custid = c.custid " +
@@ -34,6 +36,7 @@ public class billdisplay {
         }
     }
 
+    // function to display the bill items
     public static void displayBill(int billid) {
         
         

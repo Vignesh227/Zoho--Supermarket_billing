@@ -6,12 +6,14 @@ import java.util.Scanner;
 
 public class billdetailsdate {
 
+    // Set username, pass, and establish connection url
     static String url = "jdbc:mysql://localhost:3308/supermarket?allowPublicKeyRetrieval=true&useSSL=false";
     static String username = "root";
     static String pass = "admin";
 
     Scanner sc = new Scanner(System.in);
 
+    // Function to fetch all bills on a particular date
     public void billdate(){
 
         System.out.print("\n Enter the date (yyyy/mm/dd) : ");
@@ -29,10 +31,11 @@ public class billdetailsdate {
                 ResultSet billingresult = statement.executeQuery();
 
                 
-
                 while(billingresult.next()){
                     Integer custid = billingresult.getInt("custid");
 
+                    // if previous customer id doesn't match with current customer id
+                    // then display the customer details, else skip the customer details
                     if(custid != prevCustId){
 
                         System.out.print("\n_____________________________________________________________ \n");
@@ -48,6 +51,8 @@ public class billdetailsdate {
                     Integer billid = billingresult.getInt("billid");
 
                     System.out.print("\n\n Bill ID : " + billid);
+
+                    // Call existing function to display the bill
                     billdisplay.displayBill(billid);
 
 

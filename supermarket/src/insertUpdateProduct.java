@@ -6,12 +6,14 @@ import java.util.Scanner;
 
 public class insertUpdateProduct {
 
+    // Set username, pass, and establish connection url
     static String url = "jdbc:mysql://localhost:3308/supermarket?allowPublicKeyRetrieval=true&useSSL=false";
     static String username = "root";
     static String pass = "admin";
 
     Scanner sc = new Scanner(System.in);
 
+    // Function to insert a new product in the Products Table
     public void insertProduct(){
         System.out.print("\n Enter product name : ");
         String name = sc.next();
@@ -43,6 +45,7 @@ public class insertUpdateProduct {
         
     }
 
+    // Function to update the existing records in the 'product' table
     public void updateProduct(){
 
         products.displayproducts();

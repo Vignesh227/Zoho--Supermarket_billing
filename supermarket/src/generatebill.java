@@ -10,6 +10,8 @@ import java.time.format.DateTimeFormatter;
 
 
 public class generatebill {
+
+    // Set username, pass, and establish connection url
     String url = "jdbc:mysql://localhost:3308/supermarket?allowPublicKeyRetrieval=true&useSSL=false";
     String username = "root";
     String pass = "admin";
@@ -24,6 +26,7 @@ public class generatebill {
         System.out.print(" Enter your phone number : ");
         String phnno = sc.next();
         
+        // check if the customer already exists
         if (checkCustomer(name, phnno)) {
             System.out.println("\n Hello " + name + "! your Account logged-in successfully ");
         } 
@@ -33,8 +36,10 @@ public class generatebill {
             addCustomer(name, phnno);
         }
 
-        
+        // extract customer id
         int custid = customerdetails.getCustomerId(name, phnno);
+
+        // proceed with the billing
         getDetails(custid);
         
     }
@@ -75,6 +80,7 @@ public class generatebill {
             statement.setString(2, phnno);
             
             int rowsInserted = statement.executeUpdate();
+
             if (rowsInserted > 0) {
                 System.out.println("\n Hello! "+ name + " your Customer Account has been created successsfully! ");
             }
@@ -85,7 +91,7 @@ public class generatebill {
 
 
 
-    // Function to get details of the purchase
+    // Function to get details of the purchase/bill
     public void getDetails(Integer custid){
 
         System.out.print("\n Enter the number of products : ");
@@ -104,6 +110,8 @@ public class generatebill {
             // Insert the bill and get the generated bill ID
             int billid = insertBill(connection, custid, date);
 
+            // for 'num' number of products,
+            // iterate the loop
             while(num > 0){
                 System.out.print("\n Enter product id : ");
                 int prodid = sc.nextInt();
@@ -114,7 +122,7 @@ public class generatebill {
                 // Return the current product availablity
                 int currAvailabilty = returnProductAvailability(prodid);
 
-                
+                // If product availability is greater than or equal to quantity required
                 if(currAvailabilty >= quantity){
                     System.out.print("\n Product purchased successfully \n");
 
@@ -124,6 +132,8 @@ public class generatebill {
 
                 // If quantity is not sufficient
                 else if(currAvailabilty > 0){
+
+                    // ask the user, if they purchase the remaining available quantity
                     System.out.print("\n Sorry, " + quantity + " items are not available ! ");
 
                     System.out.print("\n Only " + currAvailabilty + " product(s) are available !");
@@ -146,11 +156,16 @@ public class generatebill {
 
                 --num;  
             }
+
             // Update the total price in the bill table
             updateBillTotalPrice(connection, billid, totalprice);
 
             System.out.print("\n_____________________________________________________________ \n");
+
+            // display customer details
             billdisplay.displayCustomer(billid);
+
+            // display current bill details
             billdisplay.displayBill(billid);
             System.out.print("\n_____________________________________________________________ \n");
 
@@ -258,6 +273,9 @@ public class generatebill {
             statement.setInt(1, custid);
             statement.setString(2, date);
 
+            // Create a new record in the 'billing' table,
+            // return the primary key 'billid', to proceed with further billing
+            // (to store the items and quantity purchased)
             int rowsInserted = statement.executeUpdate();
             if (rowsInserted > 0) {
                 try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
@@ -308,7 +326,8 @@ public class generatebill {
         try (PreparedStatement updateProductStmt = connection.prepareStatement(updateProductSql);
              PreparedStatement insertBillingItemStmt = connection.prepareStatement(insertBillingItemSql)) {
             
-            // Update product availability
+            // Update product availability 
+            // detuct the quantity purchased
             updateProductStmt.setInt(1, quantity);
             updateProductStmt.setInt(2, prodid);
             updateProductStmt.executeUpdate();
@@ -323,8 +342,6 @@ public class generatebill {
             e.printStackTrace();
         }
     }
-
-
 
 
     // Function to update the total amount

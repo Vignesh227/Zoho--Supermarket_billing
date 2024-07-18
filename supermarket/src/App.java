@@ -36,17 +36,20 @@ public class App {
             int choice = sc.nextInt();
 
             switch(choice){ 
+                // billing
                 case 1:
                     generatebill gen = new generatebill();
                     gen.bill();
                     break;
                 
+                // display customer details
                 case 2:
                     customerdetails cust = new customerdetails();
                     cust.customer();
                     break;
+
+                // display product availability
                 case 3:
-                    // check
                     if(checkAdmin(user, pass)){
                         products.displayproducts();
                     }
@@ -54,8 +57,9 @@ public class App {
                         System.out.print("\n Invalid Admin UserName / Password ! \n");
                     }
                     break;
+
+                // display all bills on a date
                 case 4:
-                    // check
                     if(checkAdmin(user, pass)){
                         billdetailsdate prod = new billdetailsdate();
                         prod.billdate();
@@ -65,6 +69,8 @@ public class App {
                     }
                     
                     break;
+
+                // Insert / Update Product
                 case 5:
                 if(checkAdmin(user, pass)){
                     insertUpdateProduct ins = new insertUpdateProduct();
@@ -87,7 +93,9 @@ public class App {
                     }
 
                 }
-                    break;
+                break;
+                
+                // Exit the program
                 case 6: 
                     System.out.print("\n Thanks for using our Supermarket Application ! \n\n");
                     sc.close();
