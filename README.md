@@ -14,11 +14,11 @@ The Supermarket Billing Application is designed to manage
 ![image](https://github.com/user-attachments/assets/41f7f699-9c2f-4c60-a1a8-30c19f8b4c07)
 
 ## Modules
-- Billing Section
-- Display All Bills of a Particular Customer
-- Display Product Availability
-- Display All Bills on a Particular Date
-- Insert / Update Product
+- Billing Section _(Customer)_
+- Display All Bills of a Particular Customer _(Admin)_
+- Display Product Availability _(Admin)_
+- Display All Bills on a Particular Date _(Admin)_
+- Insert / Update Product _(Admin)_
 
 ## Module Description
 ### 1) Billing Section
