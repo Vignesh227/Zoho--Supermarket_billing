@@ -38,7 +38,7 @@ public class billdetailsdate {
                         System.out.print("\n_____________________________________________________________ \n");
 
                         String custname = billingresult.getString("custname");
-                        Integer phnno = billingresult.getInt("phnno");
+                        String phnno = billingresult.getString("phnno");
                         System.out.print("\n Customer ID : " + custid);
                         System.out.print("\n Name : " + custname + "\n Phn No : " + phnno);
 
