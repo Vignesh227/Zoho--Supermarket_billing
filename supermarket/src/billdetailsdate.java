@@ -4,6 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Scanner;
 
+
 public class billdetailsdate {
 
     // Set username, pass, and establish connection url
@@ -35,7 +36,7 @@ public class billdetailsdate {
                     Integer custid = billingresult.getInt("custid");
 
                     // if previous customer id doesn't match with current customer id
-                    // then display the customer details, else skip the customer details
+                    // then display the customer details, else skip the current customer details
                     if(custid != prevCustId){
 
                         System.out.print("\n_____________________________________________________________ \n");
