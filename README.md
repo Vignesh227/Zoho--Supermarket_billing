@@ -9,6 +9,7 @@ The Supermarket Billing Application is designed to manage
  - Tracking Products
  - Customer Information
  - Billing Details.
+ - Updating Products
 
 ## MySQL Database - Table Structure
 ![image](https://github.com/user-attachments/assets/41f7f699-9c2f-4c60-a1a8-30c19f8b4c07)
