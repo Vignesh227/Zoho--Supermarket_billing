@@ -1,6 +1,6 @@
 # Zoho--Supermarket_billing
 
-## Question / Challlenge
+## Question / Challenge
 Create a Super Market Billing Console Application using `Java`, `JDBC`, and `MySQL` that handles multiple customers and products, generates bills for purchases, creates or logs in customer profiles, and updates customer profiles and product information after purchases.
 
 ## Solution Overview
