@@ -67,7 +67,7 @@ _Functionality:_
 - Allows the admin to add new products to the 'Product' table.
 - Allows the admin to update details of existing products in the 'Product' table, such as price and quantity.
 
-## Ouput Screenshots
+## Ouput Screenshots..
 
 ![image](https://github.com/user-attachments/assets/86f90f88-4507-4b59-ac67-e24ea63ced0c)
 ![image](https://github.com/user-attachments/assets/53a0e8cf-d805-40fb-8d6f-fb45a56994db)
